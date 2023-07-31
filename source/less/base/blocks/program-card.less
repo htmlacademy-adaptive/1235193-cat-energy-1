@@ -1,0 +1,59 @@
+.program-card {
+  width: 280px;
+  background-color: @color-dark;
+  padding: 21px 20px 0 20px;
+  position: relative;
+   &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 55px;
+    top: 10px;
+    left: 0;
+   }
+}
+
+.program-card--cat_sit {
+ &::after {
+  background-image: url("../img/cat-sit.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+ }
+}
+
+.program-card--cat_go {
+  &::after {
+   background-image: url("../img/cat-go.svg");
+   background-repeat: no-repeat;
+   background-position: center center;
+  }
+}
+
+.program-card__title {
+  .font-basic();
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 24px;
+  line-height: 37px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.program-card__descr {
+  width: 230px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.program-card__link {
+  .font-basic();
+  display: block;
+  padding: 15px 0;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+
+}
