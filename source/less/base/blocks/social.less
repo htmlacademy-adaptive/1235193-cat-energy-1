@@ -1,0 +1,33 @@
+.social {
+  .list-reset();
+    display: flex;
+}
+
+.social__link {
+  display: inline-block;
+  width: 28px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social__link--vk {
+  background-image: url("../img/vk.svg");
+}
+
+.social__link--youtube {
+  background-image: url("../img/youtube.svg");
+}
+
+.social__link--telegram {
+  background-image: url("../img/telegram.svg");
+}
+
+.social__item:not(:last-child) {
+ margin-right: 24px;
+}
+
+.social__item:last-child {
+  margin: 0;
+}
+
