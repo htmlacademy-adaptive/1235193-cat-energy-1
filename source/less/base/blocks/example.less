@@ -1,11 +1,11 @@
 .example {
   background-color: @color-medium;
-  padding-top: 25px;
-  padding-bottom: 40px;
+  padding: 25px 20px 40px 20px;
 }
 
 .example__wrapper {
-  width: 280px;
+  min-width: 280px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -15,7 +15,6 @@
 
 .example__container {
   display: grid;
-  grid-template-rows: repeat(3, auto) 256px;
   grid-gap: 20px;
 }
 
@@ -23,7 +22,6 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 1fr;
   gap: 8px 20px;
 }
 
@@ -34,7 +32,9 @@
   line-height: 24px;
   color: #000000;
   grid-row: 1/2;
-  justify-self: center;
+  padding: 20px;
+  border: 1px solid #cdcdcd;
+  text-align: center;
 }
 
 .example__descr {
@@ -43,7 +43,15 @@
   line-height: 12px;
   color: #444444;
   margin: 0;
+  justify-self: center;
+  margin-top: -20px;
   text-align: center;
+}
+
+.example__line {
+  background-color: @color-medium;
+  display: inline-block;
+  max-width: 90%;
 }
 
 .example__span {
@@ -53,5 +61,9 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.example__contain {
+  justify-self: center;
 }
 

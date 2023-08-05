@@ -1,24 +1,26 @@
 .program-card {
-  width: 280px;
+  width: 100%;
+  max-width: 600px;
   background-color: @color-dark;
   padding: 21px 20px 0 20px;
   position: relative;
-   &::after {
+
+    &::after {
     content: "";
     position: absolute;
     width: 70px;
     height: 55px;
     top: 10px;
     left: 0;
-   }
+  }
 }
 
 .program-card--cat_sit {
- &::after {
+  &::after {
   background-image: url("../img/cat-sit.svg");
   background-repeat: no-repeat;
   background-position: center center;
- }
+  }
 }
 
 .program-card--cat_go {
@@ -37,11 +39,11 @@
   line-height: 37px;
   color: #000000;
   text-transform: uppercase;
-  text-align: center;
+  padding-left: 91px;
 }
 
 .program-card__descr {
-  width: 230px;
+  width: 100%;
   padding-bottom: 23px;
   border-bottom: 1px solid #d9d9d9;
 }
