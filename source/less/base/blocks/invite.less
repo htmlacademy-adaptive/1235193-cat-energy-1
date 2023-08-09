@@ -3,6 +3,11 @@
   display: flex;
   justify-content: space-between;
   min-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+    min-width: @tablet-width;
+  }
 }
 
 .invite__title {
@@ -13,6 +18,13 @@
   color: #111111;
   text-transform: uppercase;
   width: 139px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 170px;
+  }
+
 }
 
 .invite__address {

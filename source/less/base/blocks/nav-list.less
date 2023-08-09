@@ -38,7 +38,12 @@
   border-bottom: 1px solid #e6e6e6;
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
+
 
 .nav-list__item:not(:first-child) {
   @media (min-width: @tablet-width) {

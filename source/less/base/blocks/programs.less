@@ -1,11 +1,19 @@
 .programs {
   min-width: 320px;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+  }
 }
 
 .programs__list {
- .list-reset();
- padding-top: 20px;
+  .list-reset();
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .programs__item {
@@ -13,6 +21,14 @@
   margin-bottom: 20px;
 }
 
+.programs__item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+}
 
-
-
+.programs__item:last-child {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
