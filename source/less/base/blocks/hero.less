@@ -1,10 +1,35 @@
 .hero {
   min-width: 320px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     padding-bottom: 526px;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 185px;
+    min-width: @desktop-width;
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: calc(100% + 140px);
+      background-image: url("../img/hero-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 
@@ -15,6 +40,11 @@
     padding-bottom: 0;
     position: relative;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+
   &::before {
     @media (min-width: @tablet-width) {
       content: "";
@@ -26,11 +56,26 @@
       background-size: contain;
       background-position: center center;
       bottom: -580px;
-      left: 50%;
+      left: 70%;
       transform: translateX(-50%);
     }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      width: 552px;
+      height: 499px;
+      left: unset;
+      bottom: -250px;
+      background-image: url("../img/product-view.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      transform: none;
+      right: -420px;
+    }
   }
-  }
+}
 
 .hero__container {
   display: flex;
@@ -113,12 +158,13 @@
 
 .hero__button {
   margin: 0 20px;
- @media (min-width: @tablet-width) {
-  margin: 0;
-  align-self: flex-start;
-  margin-left: 118px;
-  z-index: 2;
-}
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    align-self: flex-start;
+    margin-left: 118px;
+    z-index: 2;
+  }
 }
 
 

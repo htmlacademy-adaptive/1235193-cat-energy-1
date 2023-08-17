@@ -1,8 +1,6 @@
 .program-card {
-  width: 100%;
-  max-width: 600px;
   background-color: @color-dark;
-  padding: 21px 20px 0 20px;
+  padding: 30px 33px 0 20px;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -10,13 +8,19 @@
     padding: 77px 0 53px 53px;
   }
 
+  @media (min-width: @desktop-width) {
+    min-width: 570px;
+    padding: 77px 61px 55px 52px;
+    max-width: calc((1350px - 80px) / 2);
+  }
+
   &::after {
     content: "";
     position: absolute;
     width: 70px;
     height: 55px;
-    top: 10px;
-    left: 0;
+    top: 19px;
+    left: 11px;
   }
 
   &::after {
@@ -25,9 +29,20 @@
       position: absolute;
       width: 270px;
       height: 215px;
-      left: 70%;
+      left: unset;
       top: 20px;
+      right: 0;
     }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      width: 134px;
+      height: 100px;
+      right: unset;
+      top: 20px;
+      left: 0;
+    }
+
   }
 }
 
@@ -68,7 +83,7 @@
   line-height: 37px;
   color: #000000;
   text-transform: uppercase;
-  padding-left: 91px;
+  padding-left: 71px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 24px;
@@ -77,12 +92,17 @@
     padding-left: 0;
     max-width: 60%;
   }
+  @media (min-width: @desktop-width) {
+   margin-left: 160px;
+   margin-bottom: 73px;
+  }
+
 }
 
 .program-card__descr {
   width: 100%;
   padding-bottom: 23px;
-  border-bottom: 1px solid #d9d9d9;
+  max-width: 500px;
 
   @media (min-width: @tablet-width) {
     max-width: 50%;
@@ -90,21 +110,29 @@
     border: none;
     color: #000000;
   }
+  @media (min-width: @desktop-width) {
+    max-width: 90%;
+  }
 }
 
 .program-card__link {
   .font-basic();
   display: block;
-  padding: 15px 0;
+  padding: 20px 0;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  border-top: 1px solid #d9d9d9;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 100px center;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     font-size: 24px;
     line-height: 30px;
+    border: none;
   }
 }
