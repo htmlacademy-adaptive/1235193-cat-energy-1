@@ -1,0 +1,44 @@
+.text-input {
+  width: 100%;
+  display: flex;
+  gap: 13px;
+}
+
+.text-input__label {
+  .font-basic();
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: block;
+  padding-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.text-input__input {
+  flex-grow: 1;
+  height: 45px;
+  border: 1px solid #e7e7e7;
+  .font-basic();
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 0 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    height: 52px;
+  }
+}
+
+.text-input__icon {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}

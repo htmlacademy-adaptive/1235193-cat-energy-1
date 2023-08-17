@@ -1,0 +1,20 @@
+.inner-text {
+  padding: 0;
+  margin: 0 22px;
+  .font-basic();
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 256px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+    margin: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+  }
+}

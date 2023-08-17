@@ -1,24 +1,44 @@
 .programs {
   min-width: 320px;
-  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     min-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: @desktop-width;
+    margin: 0 auto;
   }
 }
 
 .programs__list {
   .list-reset();
-  padding-top: 20px;
+  padding: 20px;
+  padding-bottom: 0;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    padding-top: 82px;
+    padding-bottom: 71px;
+    justify-content: center;
+  }
 }
 
 .programs__item {
-  margin: 0 auto;
+  max-width: 100%;
   margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .programs__item:not(:last-child) {
@@ -27,8 +47,25 @@
   }
 }
 
+
 .programs__item:last-child {
+  margin-bottom: 0;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 }
+
+.programs__item:nth-child(n) {
+  @media (min-width: @desktop-width) {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+}
+
+.programs__item:nth-child(2n) {
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}
+

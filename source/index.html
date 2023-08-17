@@ -8,6 +8,13 @@
   </head>
   <body class="page__body">
     <header class="main-header">
+      <div class="main-header__icon">
+        <a class="main-header__link image-link" href="#">
+          <picture>
+            <img class="image-link__icon" src="./img/nav-logo.svg" width="101" height="18" alt="Иконка навигации">
+          </picture>
+        </a>
+      </div>
       <div class="main-header__logo">
         <a class="main-header__link logo" href="#">
           <picture>
@@ -15,12 +22,12 @@
           </picture>
         </a>
       </div>
-      <nav class="main-header__nav main-nav">
+      <nav class="main-header__nav main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
           <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
+              <li class="nav-list__item">
               <a class="nav-list__link nav-list__link--color" href="index.html">
               Главная
               </a>
@@ -31,7 +38,7 @@
               </a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#">
+              <a class="nav-list__link" href="form.html">
               Подбор программы
               </a>
             </li>
@@ -47,7 +54,7 @@
           <p class="hero__descr">Занялся собой? Займись котом!</p>
         </div>
         </div>
-          <a class="hero__button button" href="#">Подобрать программу</a>
+          <a class="hero__button button" href="form.html">Подобрать программу</a>
       </section>
       <section class="programs">
         <h2 class="visually-hidden">Программы питания</h2>
@@ -98,21 +105,30 @@
                 <span class="example__line">затрачено времени</span>
               </dd>
           </dl>
-          <span class="example__span">Затраты на питание: 15 000 РУБ.</span>
+          <div class="example__div">
+          <span class="example__span">Затраты на питание:</span>
+            <span class="example__span"> 15 000 РУБ.</span>
+          </div>
           <div class="example__contain slider">
             <ul class="slider__list">
               <li class="slider__item">
-                <img class="slider__image" src="./img/fat-cat.png" width="280" height="256" alt="Фото толстого кота">
-              </li>
-              <li class="slider__item">
                 <img class="slider__image" src="./img/thin-cat.png" width="280" height="256" alt="Фото худого кота">
               </li>
+              <li class="slider__item slider__item--fat">
+                <img class="slider__image" src="./img/fat-cat.png" width="280" height="256" alt="Фото толстого кота">
+                <div class="slider__curtain">
+                  <button class="slider__button" type="button">
+                    <svg class="slider__icon"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
+                      <path d="M16 11L8 20L16 29V11Z"/>
+                      <path d="M32 20L24 11V29L32 20Z"/>
+                      <rect x="1" y="1" width="38" height="38" rx="19" stroke-width="2"/>
+                      </svg>
+                    <span class="visually-hidden">Шторка для переключения изображения котов</span>
+                  </button>
+                </div>
+              </li>
             </ul>
-            <div class="slider__curtain">
-              <button class="slider__button" type="button">
-                <span class="visually-hidden">Шторка для переключения изображения котов</span>
-              </button>
-            </div>
             </div>
           </div>
         </div>
@@ -155,7 +171,7 @@
           <a class="main-footer__copyright-descr" href="#">
             <img src="./img/footer-descr.svg" width="113" height="19"  alt="Копирайт подпись">
           </a>
-          <a class="main-footer__cooyright-image" href="#">
+          <a class="main-footer__copyright-image" href="#">
             <img src="./img/footer-icon.svg" width="27" height="34" alt="Копирайт иконка">
           </a>
         </div>

@@ -1,0 +1,41 @@
+.special-title {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.special-title::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  z-index: 1;
+  height: 1px;
+  border-top: 1px solid #68b738;
+}
+
+.special-title__text {
+  display: inline-block;
+  padding: 0 22px 0 20px;
+  background-color: @color-light;
+  position: relative;
+  z-index: 5;
+  max-width: 226px;
+  .font-basic();
+  font-size: 24px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 0 40px;
+    font-size: 36px;
+    line-height: 36px;
+    max-width: 594px;
+    margin-left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 61px;
+  }
+}
