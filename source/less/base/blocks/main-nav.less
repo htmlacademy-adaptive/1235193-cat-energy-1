@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
 
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
@@ -15,30 +16,47 @@
 }
 
 .main-nav__toggle {
-  display: inline-block;
+  display: block;
   position: absolute;
   border: none;
-  top: -47px;
-  right: 20px;
+  top: -45px;
+  right: 21px;
   width: 25px;
   height: 20px;
-  background: url("../img/mobile-closed.svg") no-repeat center center;
   cursor: pointer;
+  z-index: 5;
+  background-color: @color-light;
+
 
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+
 .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 8%;
-  right: 20px;
+  top: 0;
+  right: 0;
   width: 25px;
   height: 20px;
+  background: url("../img/mobile-closed.svg") no-repeat center center;
+}
+
+.main-nav--closed .main-nav__toggle::before {
   background: url("../img/nav-button-mobile.svg") no-repeat center center;
-  cursor: pointer;
+}
+
+.main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: @color-light;
+    width: 100%;
+  }
 }
 
 .main-nav--closed .main-nav__list {
@@ -46,3 +64,6 @@
     display: none;
   }
 }
+
+
+
