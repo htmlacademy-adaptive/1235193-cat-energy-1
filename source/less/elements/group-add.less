@@ -16,7 +16,11 @@
   margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 49px;
   }
 }
 
@@ -24,16 +28,21 @@
   padding: 0 20px 34px 20px;
 
   @media (min-width: @tablet-width) {
+    width: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 123px;
-    margin-left: 70px;
-    padding-bottom: 54px;
+    gap: 33px 124px;
+    margin-left: 50px;
+    padding-bottom: 58px;
   }
 
-  @media (min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
     padding-bottom: 0;
     grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    width: 1220px;
+    padding-left: 0;
+    gap: 32px 102px;
   }
 }
 

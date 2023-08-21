@@ -1,6 +1,16 @@
 .main-header {
   position: relative;
   min-width: 320px;
+  background: url("../img/nav-logo.svg") no-repeat center 23px;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
+
+.main-header__container {
+  position: relative;
+  padding-top: 65px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
@@ -10,10 +20,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: @desktop-width;
-    max-width: 1350px;
+    width: 1220px;
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 0;
   }
 }
 
@@ -29,10 +38,8 @@
   top: 10px;
   left: 20px;
 
-@media (min-width: @desktop-width) {
-  top: 20px;
-  left: 110px;
- }
+  @media (min-width: @desktop-width) {
+    top: 53px;
+    left: 0;
+  }
 }
-
-

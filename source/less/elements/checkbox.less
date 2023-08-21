@@ -8,6 +8,12 @@
   position: relative;
   padding: 9px 0 0 45px;
   min-height: 32px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 60px;
+  }
 }
 
 .checkbox__label::before {
@@ -18,6 +24,12 @@
   top: 0;
   left: 0;
   border: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+
+  }
  }
 
 .checkbox__label::after {
@@ -31,6 +43,13 @@
   background-repeat: no-repeat;
   background-position: center center;
   display: none;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 19px;
+    background-size: contain;
+    top: 14px;
+  }
 }
 
 .checkbox__input:checked + .checkbox__label::after {

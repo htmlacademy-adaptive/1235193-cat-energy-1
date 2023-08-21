@@ -12,46 +12,41 @@
 
   <body class="page__body">
     <header class="main-header">
-      <div class="main-header__icon">
-        <a class="main-header__link image-link" href="#">
+      <div class="main-header__container">
+        <a class="main-header__logo logo logo-form" href="#">
           <picture>
-            <img class="image-link__icon" src="./img/nav-logo.svg" width="101" height="18" alt="Иконка навигации">
+            <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" />
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" />
+          <img class="logo__image" src="./img/logo-mobile.svg" alt="Иконка логотипа">
           </picture>
         </a>
-      </div>
-      <div class="main-header__logo">
-        <a class="main-header__link logo" href="#">
-          <picture>
-            <img class="logo__image" src="./img/logo-mobile.svg" width="34" height="38" alt="Иконка логотипа">
-          </picture>
-        </a>
-      </div>
       <nav class="main-header__nav main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--color" href="index.html">
+          <ul class="main-nav__list nav-list nav-form">
+              <li class="nav-list__item nav-form__item">
+              <a class="nav-list__link nav-list__link--color" href="index.html">
               Главная
-            </a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="catalog.html">
+              </a>
+            </li>
+            <li class="nav-list__item nav-form__item">
+              <a class="nav-list__link" href="catalog.html">
               Каталог продукции
-            </a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">
+              </a>
+            </li>
+            <li class="nav-list__item nav-form__item">
+              <a class="nav-list__link" href="form.html">
               Подбор программы
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
       </nav>
+    </div>
     </header>
     <main class="page__main form-page">
       <h1 class="inner-title form-page__title">Подбор программы</h1>
-      <p class="inner-text form-page__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="inner-text form-page__text">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
       <form action="http://htmlacademy.ru" class="form-page__form form" method="post">
         <fieldset class="form__group group-name">
           <ul class="form__list group-name__list">
@@ -66,7 +61,7 @@
                 name="weight">
             </li>
             <li class="form__item text-input group-name__item">
-              <label for="age" class="text-input__label">Возраст (лет):</label>
+              <label for="age" class="text-input__label">Возраст&nbsp;(лет):</label>
               <input type="text" class="text-input__input" value="7" placeholder="Введите возраст питомца" id="age"
                 name="age">
             </li>
@@ -92,7 +87,9 @@
         </fieldset>
         <fieldset class="form__group group-contact">
           <h2 class="special-title group-contact__title">
+            <div class="special-title__container">
             <span class="special-title__text">Контактные данные (владельца кота)</span>
+          </div>
           </h2>
           <ul class="form__list group-contact__list">
             <li class="form__item group-contact__item text-input">
@@ -118,7 +115,9 @@
         </fieldset>
         <fieldset class="form__group group-comment">
           <h2 class="special-title group-comment__title">
+          <div class="special-title__container">
             <span class="special-title__text">Комментарий</span>
+          </div>
           </h2>
           <div class="group-comment__container">
             <label class="visually-hidden" for="comment">Ваш комментарий</label>
@@ -128,7 +127,9 @@
         </fieldset>
         <fieldset class="form__group group-add">
           <h2 class="special-title group-add__title">
+            <div class="special-title__container">
             <span class="special-title__text">Дополнительно</span>
+            </div>
           </h2>
           <ul class="form__list group-add__list">
             <li class="form__item group-add__item checkbox">
