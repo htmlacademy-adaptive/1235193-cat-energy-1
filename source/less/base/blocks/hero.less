@@ -61,6 +61,11 @@
       background-size: contain;
       background-position: center center;
       left: 55%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/product-view-desktop@2x.png");
+        background-size: 1338px auto;
+      }
     }
   }
 }
@@ -90,7 +95,7 @@
   @media (min-width: @desktop-width) {
     width: 50%;
   }
- }
+}
 
 .hero__container {
   display: flex;
