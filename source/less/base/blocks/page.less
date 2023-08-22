@@ -7,6 +7,22 @@
   width: 100%;
 }
 
+.page__body--index {
+  position: relative;
+
+  &::before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      width: 50%;
+      height: 600px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #63a63c;
+    }
+  }
+}
+
 .page__main {
   flex-grow: 1;
 }

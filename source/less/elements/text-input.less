@@ -2,6 +2,10 @@
   width: 100%;
   display: flex;
   gap: 13px;
+
+  @media (min-width: @tablet-width) and  (max-width: @desktop-width) {
+    gap: 18px;
+  }
 }
 
 .text-input__label {
@@ -28,7 +32,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 0 16px;
+  padding: 0 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -39,6 +43,6 @@
 
 .text-input__icon {
   position: absolute;
-  top: 13px;
-  right: 12px;
+  top: 18px;
+  right: 19px;
 }
