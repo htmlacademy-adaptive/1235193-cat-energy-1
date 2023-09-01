@@ -6,10 +6,16 @@
   line-height: 18px;
   text-transform: uppercase;
   padding: 10px 15px;
+  resize: vertical;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     padding: 10px 19px;
+  }
+
+  &:focus {
+    border-color: #444444;
+    outline: none;
   }
 }

@@ -32,12 +32,25 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 0 18px;
+  padding: 0 13px 0 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     height: 52px;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+    outline: none;
+  }
+
+  &:invalid {
+    border-color: #ff8282;
   }
 }
 

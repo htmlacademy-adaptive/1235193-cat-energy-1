@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 250px;
+    padding-bottom: 186px;
     width: 100%;
   }
 
@@ -30,7 +30,6 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/hero-desktop@2x.jpg");
-        background-size: 1338px auto;
       }
     }
   }
@@ -46,8 +45,12 @@
       background-size: contain;
       background-position: center center;
       bottom: 0;
-      left: 70%;
+      left: 50%;
       transform: translateX(-50%);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/product-view-tablet@2x.png");
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -55,16 +58,15 @@
       position: absolute;
       width: 552px;
       height: 499px;
-      bottom: 120px;
+      bottom: 55px;
       background-image: url("../img/product-view-desktop.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
-      left: 55%;
+      left: 57%;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/product-view-desktop@2x.png");
-        background-size: 1338px auto;
       }
     }
   }
@@ -111,11 +113,16 @@
   padding-bottom: 164px;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-background@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background: none;
     align-items: flex-start;
     padding-bottom: 49px;
-    padding-left: 118px;
+    padding-left: 33px;
+    padding-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -134,9 +141,14 @@
     background-image: url("../img/product-view.png");
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: contain;
     bottom: -135px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/product-view@2x.png");
   }
 }
 
@@ -182,12 +194,15 @@
 
 .hero__button {
   margin: 0 20px;
+  padding-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     align-self: flex-start;
-    margin-left: 118px;
+    margin-left: 36px;
     width: 244px;
+    padding-bottom: 16px;
+    padding-top: 18px;
   }
 
   @media (min-width: @desktop-width) {
