@@ -1,12 +1,17 @@
 .example {
   background-color: @color-medium;
-  padding: 25px 20px 40px 20px;
+  padding: 25px 20px 37px 20px;
 
 
   @media (min-width: @tablet-width) {
     background-color: @color-light;
-    padding: 43px 0 101px 0;
+    padding: 43px 0 139px 0;
     position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+    padding-bottom: 69px;
   }
 
   &::before {
@@ -20,8 +25,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      height: 77%;
-      
+      height: 69%;
     }
   }
 }
@@ -50,6 +54,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 63px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__container {
@@ -58,7 +66,11 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 54px 165px;
+    gap: 54px 152px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 55px 227px;
   }
 }
 
@@ -68,8 +80,14 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 11px 30px;
 
+  @media (min-width: @tablet-width) {
+    gap: 11px 42px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
+    padding-right: 66px;
+    padding-top: 13px;
   }
 }
 
@@ -113,12 +131,19 @@
   max-width: 90%;
 
   @media (min-width: @tablet-width) {
+    display: inline-block;
     background-color: @color-light;
+    max-width: 100%;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-medium;
   }
 }
 
 .example__span {
-  justify-self: center;
   .font-basic();
   color: #000000;
   font-size: 14px;
@@ -126,8 +151,6 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    justify-self: end;
-    max-width: 180px;
     text-align: end;
     font-size: 20px;
   }
@@ -138,18 +161,32 @@
   }
 }
 
+.example__span--top {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.example__span--bottom {
+  @media (min-width: @desktop-width) {
+    padding-left: 62px;
+  }
+}
+
 .example__div {
   justify-self: center;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
     grid-column: 1/2;
     justify-self: start;
+    padding-top: 0;
   }
 }
 
@@ -162,7 +199,7 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
-    margin-top: -400px;
+    margin-top: -544px;
   }
 }
 

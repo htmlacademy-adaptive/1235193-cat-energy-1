@@ -1,5 +1,5 @@
 .it-works {
-  padding: 20px 20px 29px 20px;
+  padding: 20px 22px 29px 20px;
 
   @media(min-width: @tablet-width) {
     padding: 45px 31px 47px 31px;
@@ -17,12 +17,8 @@
   width: 100%;
   margin: 0 auto;
 
-  @media (min-width: @tablet-width) {
-    min-width: 768px;
-  }
-
   @media (min-width: @desktop-width) {
-    width: 1224px;
+    width: 1220px;
     margin: 0 auto;
   }
 }
@@ -30,7 +26,7 @@
 .it-works__title {
   margin-bottom: 40px;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     margin-bottom: 32px;
   }
 }
@@ -41,10 +37,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 37px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 37px 80px;
   }
 }
 
@@ -57,8 +55,9 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding: 151px 26px 57px 0;
+    padding: 151px 0 57px 0;
     display: block;
+    margin-bottom: 0;
   }
 
   &::before {
@@ -85,7 +84,7 @@
   }
 
   &::after {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       content: "";
       .font-basic();
       font-size: 280px;
@@ -94,26 +93,25 @@
       position: absolute;
       width: 136px;
       height: 280px;
-      top: 40px;
-      right: 0;
+      top: -1px;
+      right: 73px;
       z-index: -1;
     }
 
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       top: 0;
+      right: -7px;
     }
   }
 }
 
-.it-works__item:not(:last-child) {
-  @media (min-width: @desktop-width) {
-    margin-right: 77px;
+.it-works__descr {
+  @media (min-width: @tablet-width) {
+    width: 82%;
   }
-}
 
-.it-works__item:last-child {
   @media (min-width: @desktop-width) {
-    margin-right: 0;
+    width: 100%;
   }
 }
 
@@ -123,7 +121,7 @@
   }
 
   &::after {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       content: "1";
     }
   }
@@ -135,7 +133,7 @@
   }
 
   &::after {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       content: "2";
     }
   }
@@ -147,7 +145,7 @@
   }
 
   &::after {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       content: "3";
     }
   }
@@ -159,8 +157,14 @@
   }
 
   &::after {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       content: "4";
     }
+  }
+}
+
+.it-works__break {
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

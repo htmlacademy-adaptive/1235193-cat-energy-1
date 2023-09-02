@@ -21,23 +21,22 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
+  top: 2px;
   left: 0;
   border: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-
   }
- }
+}
 
 .checkbox__label::after {
   content: "";
   position: absolute;
   width: 18px;
   height: 16px;
-  top: 7px;
+  top: 9px;
   left: 7px;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
@@ -54,4 +53,21 @@
 
 .checkbox__input:checked + .checkbox__label::after {
   display: block;
+}
+
+.checkbox__label:hover::before {
+  border-color: #bababa;
+}
+
+.checkbox__input:disabled + .checkbox__label {
+  color: fade(#222222, 30%);
+
+  &::before {
+    border-color: fade(#bababa, 30%);
+  }
+}
+
+.checkbox__input:disabled:checked + .checkbox__label::after {
+  display: block;
+  opacity: 0.3;
 }

@@ -56,3 +56,20 @@
   display: block;
 }
 
+.radio__label:hover::before {
+  border-color: #bababa;
+}
+
+.radio__input:disabled + .radio__label {
+  color: fade(#222222, 30%);
+
+  &::before {
+    border-color: fade(#bababa, 30%);
+  }
+}
+
+.radio__input:disabled:checked + .radio__label::after {
+  display: block;
+  border-color: fade(#68b738, 30%);
+  background-color: fade(#68b738, 30%);
+}

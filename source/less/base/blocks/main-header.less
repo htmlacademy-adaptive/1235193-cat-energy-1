@@ -13,7 +13,7 @@
   padding-top: 65px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 32px;
+    padding: 0 31px 0 30px;
     display: flex;
     justify-content: flex-end;
     z-index: 10;
@@ -37,6 +37,11 @@
   position: absolute;
   top: 10px;
   left: 20px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     top: 53px;
