@@ -116,10 +116,7 @@
   text-decoration: none;
   color: #000000;
   border-top: 1px solid #d9d9d9;
-  background-image: url("../img/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 100px center;
-
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -127,10 +124,30 @@
     line-height: 30px;
     border: none;
     width: 163px;
-    background-position: right center;
   }
 
   @media (min-width: @desktop-width) {
     width: 168px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.program-card__link::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 15px;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 7px;
+  left: 129px;
+}
+
+.program-card__link:hover::before {
+  width: 40px;
+  background-size: cover;
 }

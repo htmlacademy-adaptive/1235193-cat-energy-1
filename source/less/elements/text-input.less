@@ -46,11 +46,12 @@
 
   &:focus {
     border-color: #444444;
-    outline: none;
+    outline: 1px solid #444444;
   }
 
   &:invalid {
     border-color: #ff8282;
+    outline: 1px solid #ff8282;
   }
 }
 
@@ -58,4 +59,13 @@
   position: absolute;
   top: 18px;
   right: 19px;
+  stroke: #222222;
+}
+
+.text-input__input:hover + .text-input__icon {
+  stroke: #68b738;
+}
+
+.text-input__input:invalid + .text-input__icon {
+  stroke: #ff8282;
 }
