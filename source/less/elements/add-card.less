@@ -4,18 +4,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 13px 20px;
-  min-width: 320px;
 
   @media (min-width: @tablet-width) {
-    padding: 26px 38px 19px 38px;
-    grid-template-columns: 1fr auto auto;
-    gap: 25px 49px;
+    padding: 28px 39px 27px 37px;
+    grid-template-columns: 1fr 150px 50px;
+    gap: 24px 42px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 284px 177px 64px 246px;
     gap: 0 42px;
-    padding: 12px 0;
+    padding: 17px 0 10px;
     align-items: center;
   }
 }
@@ -45,17 +44,32 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    justify-self: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
   }
 }
 
 .add-card__text {
   justify-self: end;
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
+    padding-left: 23px;
+  }
 }
 
 .add-card__button {
   grid-column: 1/-1;
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 11px;
+    padding-bottom: 8px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column: 4/5;

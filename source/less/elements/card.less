@@ -1,16 +1,16 @@
 .card {
-  padding: 22px 22px 23px;
+  padding: 20px 22px 23px;
   border: 1px solid #ebebeb;
   position: relative;
   min-width: 320px;
 
   @media (min-width: @tablet-width) {
-    padding: 243px 39px 37px;
+    padding: 248px 39px 39px;
     background-color: @color-dark;
     border: none;
 
     @media (min-width: @desktop-width) {
-      padding: 254px 37px 40px 39px;
+      padding: 248px 36px 40px 42px;
       min-width: 245px;
     }
 
@@ -29,7 +29,6 @@
 
 .card__image-block {
   position: absolute;
-  top: 27px;
   left: 0;
   width: 50%;
   height: 111px;
@@ -41,19 +40,48 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     height: 210px;
-    top: 14px;
     padding-left: 0;
+  }
+}
+
+.card__image-block--small {
+  top: 33px;
+
+  @media (min-width: @tablet-width) {
+    top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 15px;
+  }
+}
+
+.card__image-block--big {
+  top: 27px;
+
+  @media (min-width: @tablet-width) {
+    top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -2px;
+  }
+}
+
+.card__image-block--first {
+  @media (max-width: @tablet-width) {
+    top: 23px;
   }
 }
 
 .card__text-block {
   width: 50%;
   margin-left: auto;
-  margin-bottom: 18px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    margin: 0 0 32px;
+    margin: 0 0 33px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,7 +98,7 @@
   text-decoration: none;
   display: inline-block;
   max-width: 88px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto 19px;
@@ -97,8 +125,8 @@
 
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid #cdcdcd;
-    margin-bottom: 8px;
-    padding-bottom: 7px;
+    margin-bottom: 7px;
+    padding-bottom: 8px;
   }
 }
 
@@ -118,7 +146,7 @@
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 11px;
+    padding: 10px;
   }
 }
 
@@ -132,7 +160,7 @@
   background-color: @color-light;
 
   @media (min-width: @tablet-width) {
-    padding: 249px 37px 22px;
+    padding: 247px 37px 22px;
   }
 }
 
@@ -160,7 +188,7 @@
 
   @media (min-width: @desktop-width) {
     max-width: 100%;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 }
 
@@ -209,4 +237,12 @@
   background-color: @color-dark;
   align-self: stretch;
   text-align: center;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
