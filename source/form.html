@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" sizes="16x16" href="./img/favicons/favicon-16.png" type="image/x-icon">
+  <link rel="icon" sizes="32x32" href="./img/favicons/favicon-32.png" type="image/x-icon">
+  <link rel="icon" sizes="152x152" href="./img/favicons/favicon-152.png" type="image/x-icon">
   <title>Form Cat Energy</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -172,6 +176,9 @@
           </div>
           <div class="map__image-container">
             <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="./img/location-desktop.webp 1x, ./img/location-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="./img/location-tablet.webp 1x, ./img/location-tablet@2x.webp 2x">
+            <source media="(min-width: 10px)" type="image/webp" srcset="./img/location.webp 1x, ./img/location@2x.webp 2x">
               <source media="(min-width: 1440px)"
                 srcset="./img/location-desktop.jpg 1x, ./img/location-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="./img/location-tablet.jpg 1x, ./img/location-tablet@2x.jpg 2x">
