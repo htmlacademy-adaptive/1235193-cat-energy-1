@@ -28,6 +28,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     width: 1220px;
     margin: 0 auto;
   }
@@ -59,3 +60,18 @@
 .group-contact__input {
   padding: 0 45px 0 21px;
 }
+
+.group-contact__input--email {
+  @media (min-width: @desktop-width) {
+    width: 486px;
+    flex-grow: 0;
+  }
+}
+
+.group-contact__input--tel {
+  @media (min-width: @desktop-width) {
+    width: 467px;
+    flex-grow: 0;
+  }
+}
+
