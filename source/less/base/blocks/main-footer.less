@@ -18,6 +18,18 @@
   }
 }
 
+.main-footer__wrapper--catalog {
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
 
 .main-footer__logo {
   text-align: center;
@@ -65,9 +77,15 @@
 
 .main-footer__catalog {
   padding-top: 22px;
+  padding-right: 3px;
 
   @media (min-width: @tablet-width) {
     padding-top: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 2px;
+    padding-right: 0;
   }
 }
 
@@ -92,5 +110,10 @@
 }
 
 .main-footer__catalog-social {
-  padding-top: 18px;
+  padding-top: 22px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    padding-left: 5px;
+  }
 }

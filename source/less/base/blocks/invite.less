@@ -12,10 +12,9 @@
 }
 
 .invite__wrapper {
-  padding: 26px 20px;
+  padding: 26px 22px 26px 20px;
   display: flex;
   justify-content: space-between;
-  min-width: 320px;
 
   @media (min-width: @tablet-width) {
     padding: 57px 72px 61px;
@@ -77,5 +76,7 @@
 }
 
 .invite__catalog {
-  padding-top: 56px;
+  @media (min-width: @tablet-width) {
+    padding-top: 56px;
+  }
 }
