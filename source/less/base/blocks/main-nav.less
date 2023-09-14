@@ -16,7 +16,7 @@
 }
 
 .main-nav__toggle {
-  display: block;
+  display: none;
   position: absolute;
   border: none;
   top: -45px;
@@ -26,7 +26,10 @@
   cursor: pointer;
   z-index: 5;
   background-color: @color-light;
+}
 
+.main-nav--js .main-nav__toggle {
+  display: block;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -52,7 +55,7 @@
   opacity: 0.8;
 }
 
-.main-nav__list--js {
+.main-nav--js .main-nav__list{
   @media (max-width: @mobile-width-only) {
     position: absolute;
     top: 0;
